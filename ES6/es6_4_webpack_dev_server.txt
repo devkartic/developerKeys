@@ -1,0 +1,23 @@
+// ES6 webpack-dev-server
+
+step 1. install webpack-dev-server
+
+    $npm install -d webpack-dev-server
+
+step 2. Add script on packege.json
+
+    "start": "webpack-dev-server -d"
+
+step 3. Add output on webpack.config.js
+
+    publicPath:'/dist'
+
+step 4. Run Webpack
+
+    $npm start
+
+
+
+
+
+

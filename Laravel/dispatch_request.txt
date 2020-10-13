@@ -1,0 +1,9 @@
+<?php
+
+/*  Dispatch Request :
+
+ *  Once the application has been bootstrapped and all service providers have been registered, the Request
+ *  will be handed off to the router for dispatching. The router will dispatch the request to a route or
+ *  controller, as well as run any route specific middleware.
+ *
+ */

@@ -1,0 +1,46 @@
+# Seed --help
+
+$ php artisan db:seed --help
+
+Description:
+  Seed the database with records
+
+Usage:
+  db:seed [options]
+
+Options:
+      --class[=CLASS]        The class name of the root seeder [default: "DatabaseSeeder"]
+      --database[=DATABASE]  The database connection to seed
+      --force                Force the operation to run when in production
+  -h, --help                 Display this help message
+  -q, --quiet                Do not output any message
+  -V, --version              Display this application version
+      --ansi                 Force ANSI output
+      --no-ansi              Disable ANSI output
+  -n, --no-interaction       Do not ask any interactive question
+      --env[=ENV]            The environment the command should run under
+  -v|vv|vvv, --verbose       Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+$ php artisan Make:seed --help
+
+Description:
+  Create a new seeder class
+
+Usage:
+  make:seeder <name>
+
+Arguments:
+  name                  The name of the class
+
+Options:
+  -h, --help            Display this help message
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi            Force ANSI output
+      --no-ansi         Disable ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug

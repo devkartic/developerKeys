@@ -1,0 +1,24 @@
+# Model Factory
+# For insert fake users in to database, you need to Create Model, Factory, Migration, and have table in database
+
+# Need to Create Model, Factory, Migration
+
+$ php artisan make:model User -mf
+
+@ make model column name allow. Add User model 'protected $guarded = [];'
+
+# Run to Migration command for creating table into your database
+
+$ php artisan migrate
+
+# Run tinker to execute command to your application
+
+$ php artisan tinker
+
+>> User::all();
+
+# For single fake user create
+>> factory(\App\User::class)->create();
+
+# For multiple fake user create
+>> factory(\App\User::class, 500)->create();

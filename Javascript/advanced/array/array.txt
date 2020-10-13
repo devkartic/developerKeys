@@ -1,0 +1,83 @@
+# Source Link : https://javascript.info/array
+
+------------------------------------------------------------------------------------------------------------------------
+# pop() : Extracts the last element of the array and returns it:
+
+let fruits = ["Apple", "Orange", "Pear"];
+
+console.log( fruits.pop() ); // remove "Pear" and console it
+
+console.log( fruits ); // Apple, Orange
+
+------------------------------------------------------------------------------------------------------------------------
+# push() : Append the element to the end of the array:
+
+let fruits = ["Apple", "Orange"];
+
+fruits.push("Pear");
+
+console.log( fruits ); // Apple, Orange, Pear
+
+------------------------------------------------------------------------------------------------------------------------
+# shift() : Extracts the first element of the array and returns it:
+
+let fruits = ["Apple", "Orange", "Pear"];
+
+console.log( fruits.shift() ); // remove Apple and console it
+
+console.log( fruits ); // Orange, Pear
+
+------------------------------------------------------------------------------------------------------------------------
+# unshift() : Add the element to the beginning of the array:
+
+let fruits = ["Orange", "Pear"];
+
+fruits.unshift('Apple');
+
+console.log( fruits ); // Apple, Orange, Pear
+
+
+# Methods push and unshift can add multiple elements at once:
+
+let fruits = ["Apple"];
+
+fruits.push("Orange", "Peach");
+fruits.unshift("Pineapple", "Lemon");
+
+// ["Pineapple", "Lemon", "Apple", "Orange", "Peach"]
+console.log( fruits );
+
+------------------------------------------------------------------------------------------------------------------------
+# Summery :
+
+# Array is a special kind of object, suited to storing and managing ordered data items.
+
+# The declaration:
+
+# square brackets (usual)
+let arr = [item1, item2...];
+
+E new Array (exceptionally rare)
+
+let arr = new Array(item1, item2...);
+
+# The call to new Array(number) creates an array with the given length, but without elements.
+
+# The length property is the array length or, to be precise, its last numeric index plus one.
+# It is auto-adjusted by array methods.
+
+# If we shorten length manually, the array is truncated.
+
+# We can use an array as a deque with the following operations:
+
+# push(...items) adds items to the end.
+# pop() removes the element from the end and returns it.
+# shift() removes the element from the beginning and returns it.
+# unshift(...items) adds items to the beginning.
+# To loop over the elements of the array:
+
+# for (let i=0; i<arr.length; i++) – works fastest, old-browser-compatible.
+# for (let item of arr) – the modern syntax for items only,
+# for (let i in arr) – never use.
+
+------------------------------------------------------------------------------------------------------------------------

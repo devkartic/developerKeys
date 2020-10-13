@@ -1,0 +1,21 @@
+step 1: Install xdebug
+
+$ sudo apt-get install xdebug
+
+step 2: PHP Enable Mode
+
+$ sudo phpenmod xdebug
+
+step 3: Create xdebug.ini file
+
+$ sudo gedit /etc/php/7.4/mods-available/xdebug.ini
+
+
+
+PHP Environment Setup:
+
+1. Remove Full PHP
+
+$ sudo apt-get purge 'php*'
+
+

@@ -1,0 +1,12 @@
+# Source Link : https://javascript.info/
+
+# Declaration : There are two syntaxes for creating an empty array:
+
+let arr = new Array();
+let arr = [];
+
+
+# Example :
+
+let fruits = ["Apple", "Orange", "Plum"];
+console.log( fruits.length ); // 3

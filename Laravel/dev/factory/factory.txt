@@ -1,0 +1,11 @@
+# Factory
+
+Factory :
+
+Factory is a class to create fake data in your database for testing or development purpose to your application.
+
+
+
+$faker :
+
+$faker is a helper function.

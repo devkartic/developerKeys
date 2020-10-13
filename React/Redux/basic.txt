@@ -1,0 +1,5 @@
+# what is redux ?
+
+1. Centeral data store for for all app data
+2. Any component can access data from it
+3. Makes state management easy

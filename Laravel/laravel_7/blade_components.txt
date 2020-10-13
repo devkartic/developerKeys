@@ -1,0 +1,55 @@
+# New blade components in laravel 7
+
+$ php artisan list
+
+# Fine command : make:component       Create a new view component class
+
+$ php artisan help make:component
+
+Description:
+  Create a new view component class
+
+Usage:
+  make:component [options] [--] <name>
+
+Arguments:
+  name                  The name of the class
+
+Options:
+      --force           Create the class even if the component already exists
+      --inline          Create a component that renders an inline view
+  -h, --help            Display this help message
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi            Force ANSI output
+      --no-ansi         Disable ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+
+# Components create in app/view derectory as like a controller
+# Also create a component directory in view derectory which is in resource..
+
+# <x-sidebar/> create an object component with Sidebar component which is belongs to app/View/Components.
+# Here <x-sidebar title="sidbar" :info=$info class="card"><x-sidebar/> available in sidbar component
+like title as {{ $sidbar }}, :info as {{ $info }}, and also class can 
+marge by {{ $attributes->marge(['class'=>'card']) }} in sidbar component.
+
+# html content in x-sidbar tag available as {{ $slot }} in sidebar commponent.
+# <x-slot name="subtitle"></x-slot> is available by name as {{ $subtitle }}.
+
+<x-sidebar title="sidbar" :info=$info class="card">
+  <x-slot name="subtitle"></x-slot>
+  <div>Default content</div>
+</x-sidebar>
+
+
+# This inline component use for Inline component
+# $ php artisan make:component Navigation --inline
+
+# Anonymous Components
+
+create directory or component in view/components
+
+It's gets by x-directory.componentName. It's has no class component.

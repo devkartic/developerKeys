@@ -1,0 +1,6 @@
+# make directory controller model and controller attached
+
+php artisan make:controller \\Admin\\UserController -r mU
+
+# Except controller resource method by route in web
+Route::resource('admin/user', 'Admin\UserController', ['except'=>['show', 'create', 'store']]);

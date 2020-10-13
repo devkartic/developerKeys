@@ -1,0 +1,89 @@
+// ES6 Environment Setup
+
+step 1. Create Folder with name "ES6";
+
+step 2. Open ES6 folder with CMD or GIT Bash
+
+step 3. npm install
+
+	$ npm init -y
+
+step 4. Babel Install
+
+	$ npm install --save-dev babel-core babel-preset-env
+
+step 5. Create File which name should be ".babelrc"
+
+Write code :
+
+    {
+        "presets" : [
+            "babel-preset-env"
+        ]
+    }
+
+step 6.Install babel loader
+
+    $ npm install --save-dev webpack babel-loader
+
+step 7. Install webpack
+
+    $ npm install --save-dev webpack-cli D
+
+step 8. Create File which name should be "webpack.config.js"
+
+    Create "src" Folder
+    Create File which name should be "index.js"
+
+Write code :
+
+    const path = require('path');
+
+    const config = {
+        entry : './src/index.js',
+        output : {
+            path : path.resolve(__dirname, 'dist'),
+            filename : 'bundle.js'
+        },
+
+        module :{
+            rules : [
+                {
+                    test : /\.js$/,
+                    use : {
+                        loader : 'babel-loader'
+                    }
+                }
+            ]
+        }
+    }
+
+    module.exports = config;
+
+Step 9. Open "src" folder then write "index.js"
+
+Write Code : 
+
+    const a = 10;
+    const b = 30;
+
+    const sum = (a, b) => a+b;
+
+    console.log(sum(a, b));
+
+Step 10. Open "packege.json" and write in "scripts" object value
+
+Write Code :
+
+    "Script" : {
+        "dev" : "webpack --mode development",
+        "build" : "webpack --mode production"
+    }
+
+Note : If you have any problem
+
+$ npm install --save-dev babel-loader@7
+
+
+
+

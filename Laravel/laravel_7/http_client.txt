@@ -1,0 +1,97 @@
+# Http client handling in laravel version 7 with guzzlehttp
+
+-------------------------------------------------------------------------------------------
+# use in routs of web.php
+# Test link available in https://jsonplaceholder.typicode.com/
+
+Route::get('example', function () {
+    $response = Http::get('https://jsonplaceholder.typicode.com/todos/1');
+    dd($response);
+});
+
+# It's return a Object form Illuminate\Http\Client\Response class
+
+-------------------------------------------------------------------------------------------
+
+# use body method of Response class
+
+dd($response->body());
+
+It's return string data. If we want this data in array format, we can use json() method which
+is available in Response class.
+
+dd($response->json());
+
+-------------------------------------------------------------------------------------------
+# headers() method of Response class return all headers data
+
+dd($response->headers());
+
+# If we want to ge specific header, header($key) method of Response class return all headers data
+Here $key is use as property for get key value.
+
+
+dd($response->headers('Date'));
+
+-------------------------------------------------------------------------------------------
+
+# For get request status we can use status()
+dd($response->status());
+
+-------------------------------------------------------------------------------------------
+
+# For get domain name and subqueries we can use effectiveUri() method
+dd($response->effectiveUri());
+
+-------------------------------------------------------------------------------------------
+
+# Determine if the request was successful. We can use successful();
+
+It checks request by return true or false
+
+dd($response->successful());
+
+/* return $this->status() >= 200 && $this->status() < 300; */
+
+-------------------------------------------------------------------------------------------
+
+# Determine if the response code was "OK". We can use ok();
+
+dd($response->ok());
+
+ /* return $this->status() == 200; */
+
+-------------------------------------------------------------------------------------------
+# Determine if the response was a redirect. We can use redirect();
+
+dd($response->redirect());
+
+/* return $this->status() >= 300 && $this->status() < 400; */
+
+-------------------------------------------------------------------------------------------
+
+# Determine if the response indicates a client error occurred. We can use clientError();
+
+dd($response->clientError());
+
+/* return $this->status() >= 400 && $this->status() < 500; */
+
+-------------------------------------------------------------------------------------------
+
+# Determine if the response indicates a server error occurred. We can use serverError();
+
+dd($response->serverError());
+
+/* return $this->status() >= 500; */
+
+-------------------------------------------------------------------------------------------
+
+# For get coockies. We can use cookies();
+
+dd($response->cookies());
+
+-------------------------------------------------------------------------------------------
+
+# For get any exceptions like clientError or serverError. We can use cookies();
+
+dd($response->cookies());

@@ -1,0 +1,41 @@
+### What is the difference between PHP's get method & post method ?
+
+The GET method :
+
+    a. It sends encoded user information append to the page request.
+
+    b. The GET method produces a long string that appears in your server logs, in the browser's Location: box.
+
+    c. The GET method is restricted to send upto 2048 characters only.
+
+    d. Never use GET method if you have password or other sensitive information to be sent to the server.
+
+    e. GET can't be used to send binary data, like images or word documents, to the server.
+
+    f. The data sent by GET method can be accessed using QUERY_STRING environment variable.
+
+    g. The PHP provides $_GET associative array to access all the sent information using GET method.
+
+The POST Method :
+
+    a. The POST method transfers information via HTTP headers. The information is encoded as described in
+       case of GET method and put into a header called QUERY_STRING.
+
+    b. The POST method does not have any restriction on data size to be sent.
+
+    c. The POST method can be used to send ASCII as well as binary data.
+
+    d. The data sent by POST method goes through HTTP header so security depends on HTTP protocol.
+       By using Secure HTTP you can make sure that your information is secure.
+
+    e. The PHP provides $_POST associative array to access all the sent information using POST method.
+
+
+    When we use GET in webpages, so it’s mean that we are going to append that data in the designated URL
+    And you should know that the POST is not the part of the URL. And the good advantage of using GET is to
+    bookmark any URL. As many search engines are using it. As we know the GET is a part of URL so it will
+    remain in the browser history. And the POST data will not remain in the browser history. There is also
+    another advantage of using POST method that is we can use multipart/form-data for encoding of binary
+    data. We can see many examples of GET in our daily life when we are surfing internet. For example Yahoo
+    Search - Web Search there are many examples like this in which we can get data easily. There is another
+    method in PHP programming which we can use it instead of POST and GET that is REQUEST.

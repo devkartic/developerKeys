@@ -1,0 +1,9 @@
+﻿# Basics
+
+# Check version
+
+$ php artisan -V
+
+# For any help
+
+$ php artisan --help

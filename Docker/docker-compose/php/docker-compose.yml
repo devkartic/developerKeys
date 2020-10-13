@@ -1,0 +1,8 @@
+services:
+  web:
+    image: orsolin/docker-php-5.3-apache
+    container_name: php53
+    volumes:
+    - ./home-owners-assoc:/var/www/html/
+    ports:
+    - 8000:80

@@ -1,0 +1,15 @@
+# Seeder
+
+@ Seeder classes related with factory class
+
+@ master seeder class is DatabaseSeeder and we can create more child seeder class like PostTableSeeder, CommentTableSeeder etc
+@ those are included in Parent seeder class.
+
+
+# For Run Master seeder class where included child seeder class.
+
+$ php artisan db:seed
+
+# We can also seed child class
+
+$ php artisan db:seed --class=UsersTableSeeder

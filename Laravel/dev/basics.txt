@@ -1,0 +1,8 @@
+﻿# Goto tinker
+
+$ php artisan tinker
+
+# For any help
+
+$ php artisan --help
+$ php artisan make:factory --help
