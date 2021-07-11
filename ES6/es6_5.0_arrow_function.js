@@ -1,4 +1,4 @@
-// ES6 arrow.txt function
+// ES6 arrow function
 
 /*
     // JS Funciton

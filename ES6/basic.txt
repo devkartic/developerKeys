@@ -1,0 +1,3 @@
+ECMAScript 6
+
+Official documentation link: http://es6-features.org/#Constants
