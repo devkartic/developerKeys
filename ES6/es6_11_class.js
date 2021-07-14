@@ -1,4 +1,4 @@
-// Class Inheritance in ES6
+// Class in ES6
 
 /*
 Coding methodology / style / pattern
