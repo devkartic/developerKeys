@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Await function</title>
+    <script>
+    </script>
+</head>
+<body>
+<b>Description:</b>
+<br/>
+Here, await function should be use only in async function.
+Await script to run the following statement in the block, until run the other section which outside of the block.
+<script>
+    async function test(){
+        return (await fetch('json/users.json')).json();
+    }
+    test().then(response=>console.log(response)).catch(error=> console.log(error))
+
+</script>
+</body>
+</html>

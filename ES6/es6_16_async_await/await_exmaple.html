@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Await function</title>
+    <script>
+    </script>
+</head>
+<body>
+<b>Description:</b>
+<br/>
+Here, await function should be use only in async function.
+Await script to run the following statement in the block, until run the other section which outside of the block.
+<script>
+    async function test(){
+        // console.log(`2. Message`);
+        // console.log(`3. Message`);
+        // Following statement effected by await function, that's why it's execute later.
+        let response = await fetch('json/users.json');
+        // console.log(`4. Message`);
+        let users = response.json();
+        // console.log(`5. Message`);
+        return users;
+    }
+    // console.log(`1. Message`);
+    let result = test();
+    // console.log(`6: Message`);
+    console.log(result);
+
+</script>
+</body>
+</html>
