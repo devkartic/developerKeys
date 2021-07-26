@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iterator in ES6</title>
+</head>
+<body>
+<b>Description:</b>
+<br/>
+Here, Symbol.iterator is a function which consider an array.
+<script>
+    let numbers = [100, 200, 300];
+    let iter = numbers[Symbol.iterator]();
+
+    console.log(iter.next()); // While index found the generate value = user defined and done = false
+    iter.next(); // While index found the generate value = user defined and done = false. Script to print value.
+    console.log(iter.next()); // While index found the generate value = user defined and done = false
+    console.log(iter.next()); // When index not found the generate value = undefined and done = true
+
+</script>
+</body>
+</html>
