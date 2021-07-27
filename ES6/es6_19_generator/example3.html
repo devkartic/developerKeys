@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iterator in ES6</title>
+</head>
+<body>
+<b>Description:</b>
+<br/>
+Here, generator(*) is used as prefix at function name.
+<script>
+
+    function *generatorIte(){
+        let nextNum = 300;
+        while (true){
+            yield nextNum++;
+        }
+    }
+
+    let g = generatorIte();
+    for(let value of g){
+        if(value>305) break;
+        console.log(value);
+    }
+
+</script>
+</body>
+</html>
