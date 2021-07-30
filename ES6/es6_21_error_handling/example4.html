@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Error Handling in ES6</title>
+</head>
+<body>
+<b>Description:</b>
+<br/>
+Here, Generate manual error message by error type.
+<script>
+    try {
+        blabla;
+    }catch (e) {
+        if(e instanceof ReferenceError){
+            console.log('Reference Error!');
+        } else if(e instanceof TypeError){
+            console.log('Type Error!');
+        } else if(e instanceof EvalError){
+            console.log('Eval Error!');
+        } else if(e instanceof SyntaxError){
+            console.log('Syntax Error!');
+        } else if(e instanceof RangeError){
+            console.log('Range Error!');
+        } else if(e instanceof URIError){
+            console.log('URI Error!');
+        } else if(e instanceof AggregateError){
+            console.log('Aggregate Error!');
+        }else{
+            console.log('Unknown Error!');
+        }
+    }
+
+</script>
+</body>
+</html>
