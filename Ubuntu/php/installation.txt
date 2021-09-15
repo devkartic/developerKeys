@@ -66,6 +66,7 @@ $ sudo mysql -u root -p
 Create a user named "admin" (whatever you like) and password "my_any_password" (whatever you like) and use that to connect in mysql-workbench.
 
 CREATE USER 'admin'@'localhost' IDENTIFIED BY 'my_any_password';
+
 GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
 quit;
 
@@ -84,24 +85,3 @@ $ sudo systemctl enable apache2
 $ sudo apache2ctl restart
 $ sudo systemctl restart apache2
 $ sudo service apache2 restart
-cd, ls, pwd, cp, rm, mkdir, rmdir, man, Ctrl + D, cat, touch, vim,  rm -r directory, rm file,  ls -R, mv file newfile, mv file /home/howtogeek,  cp -r, ln, ln -s, chmod
-
-//**********************Git Branch Showing*****************
-To see the the branch name with red color add the following things at the .bashrc file:
-
-force_color_prompt=yes
-
-# Add git branch if its present to PS1
-parse_git_branch() {
- git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-if [ "$color_prompt" = yes ]; then
- PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
-else
- PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
-fi
-unset color_prompt force_color_prompt
-
-
-//***********************Jetbrains ctrl+shipt+e fix********************
-In terminal type ibus-setup, go to the emoji tab, and delete the keybindings.
