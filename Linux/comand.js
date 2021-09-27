@@ -1,18 +1,27 @@
-# [] Used for define user define folder/file name
+// [] Used for define user define folder/file name
 
-# For remove file
+// For remove file
 
-$ rm -r [directory name]
+// $ rm -r [directory name]
 
-# For copy file
+// For copy file
 
-$ cp -r [directory name]
+// $ cp -r [directory name]
+
+// # For Move file
+
+// $ mv -r [directory name]
 
 
-# For create symlink
+// # For create symlink
 
-$ ln -s [Original/target folder name] [Shortcut/link folder name]
+// $ ln -s [Original/target folder name] [Shortcut/link folder name]
 
-# For access server by SSH
 
-ssh [Username]@[Hostname]
+
+// # Zip Command
+// $ tar -czvf dir.tar.gz dir
+
+// # Unzip Command
+// $ tar -xvzf dir.tar.gz // Same name
+// $ tar -xvzf dir.tar.gz user_define_dir_name // new name
