@@ -2,27 +2,27 @@
 
 ## For remove directory and files
 
-#### *rm -r [directory name]*
+#### `rm -r [directory name]`
 
 
 ## For copy directory and files
 
-#### *cp -r [directory name]*
+#### `cp -r [directory name]`
 
 
 ## For move directory and files
 
-#### *mv -r [directory name]*
+#### `mv -r [directory name]`
 
 
 ## For create symlink
 
-#### *ln -s [Original/target folder name] [Shortcut/link folder name]*
+#### `ln -s [Original/target folder name] [Shortcut/link folder name]`
 
 ## Zip Command
-#### *tar -czvf dir.tar.gz dir*
+#### `tar -czvf dir.tar.gz dir`
 
 
 ## Unzip Command
-#### *tar -xvzf dir.tar.gz * -For same name
-#### *tar -xvzf dir.tar.gz user_define_dir_name* -For new name
+#### `tar -xvzf dir.tar.gz ` -For same name
+#### `tar -xvzf dir.tar.gz user_define_dir_name` -For new name
