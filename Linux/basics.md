@@ -14,3 +14,13 @@
 
 ##### `ll`
 
+## Edit file by vim
+
+#### sudo vim [file-name.ext]
+
+#### `press i for insert`
+
+#### `Press e for edit`
+#### `Press :q! for not save and quiet`
+#### `Press :wq for write and quiet`
+
