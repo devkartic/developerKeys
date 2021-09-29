@@ -1,0 +1,1 @@
+## Automated deploying codebase in dev and production server from git repository by using jenkins.
