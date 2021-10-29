@@ -4,23 +4,23 @@
 
 ## For Get app location
 
-##### `which [app-name]`
+### `which [app-name]`
 
 ## For get view all directory and files
 
-##### `ls`
+### `ls`
 
 ## For get view all directory and files with permissions
 
-##### `ll`
+### `ll`
 
 ## Edit file by vim
 
-#### sudo vim [file-name.ext]
+### `sudo vim [file-name.ext]`
 
-#### `press i for insert`
+### `press i for insert`
 
-#### `Press e for edit`
-#### `Press :q! for not save and quiet`
-#### `Press :wq for write and quiet`
+### `Press e for edit`
+### `Press :q! for not save and quiet`
+### `Press :wq for write and quiet`
 
