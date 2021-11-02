@@ -1,6 +1,6 @@
-//  SQL vs MySQL: What's the Difference?
+##  SQL vs MySQL: What's the Difference?
 
-1. What is SQL?
+### 1. What is SQL?
 
     SQL is a language which is used to operate your database. SQL is the basic language used for all the
     databases. There are minor syntax changes amongst different databases, but the basic SQL syntax
@@ -13,7 +13,7 @@
     and for creation and modification of Database schemas.
 
 
-2. What is MYSQL?
+### 2. What is MYSQL?
 
     Developed in the mid-90s., MySQL was one of the first open-source database available in the market.
     Today there are many alternatives variants of MySQL,. However, the differences between the variants
@@ -25,11 +25,10 @@
     the combination of PHP and Apache Web Server, on top of a Linux distribution. MySQL uses the
     SQL language to query the database.
 
-Now let see the Difference between SQL and MySQL
+## Now let see the Difference between SQL and MySQL
 
 
-
-Difference between SQL and MySQL
+### Difference between SQL and MySQL
 
     SQL :
         a. Definition : SQL is a Structured Query Language. It is useful to manage relational databases.
@@ -50,7 +49,7 @@ Difference between SQL and MySQL
         g. Update : Get the frequent updates
 
 
-Conclusion:
+### Conclusion:
     SQL is a language which is used to operate your database
     MySQL was one of the first open-source database available in the market
 
