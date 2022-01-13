@@ -25,3 +25,9 @@
 ## Export Database
 
 ### `mysqldump -u [username] -p [DB_NAME] > [DB_NAME].sql`
+### `mysqldump --databases <db1> --master-data=1 --single-transaction --order-by-primary --force -r database.sql -h<host> -u<user> -p<password>`
+
+## Mac: ERROR 2002 (HY000): Can't connect to local mySQL server through socket /tmp/mysql.sock
+
+### `ln -s /Applications/MAMP/tmp/mysql/mysql.sock /tmp/mysql.sock`
+
