@@ -6,6 +6,10 @@
 
 ### `rm -r [directory name]`
 
+## For search and remove files recursively start with specific pattern [._]
+
+### `find [directory name] -name "._*" -type f -print0| xargs -0 \rm -rf`
+
 
 ## For copy directory and files
 
