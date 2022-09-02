@@ -47,3 +47,9 @@
 ## Unzip Command
 ### `tar -xvzf dir.tar.gz ` -For same name
 ### `tar -xvzf dir.tar.gz user_define_dir_name` -For new name
+
+
+
+## Source Copy Command
+### `wget http://example.com/file_name.extension ` -File should be in public_html
+### `scp username@ip:[source] [destination]` -Source should allow destination IP
