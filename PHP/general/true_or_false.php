@@ -36,17 +36,14 @@
  * 
  */
 
+$x = true;
+$y = true;
+$z = $x OR $y;
 
-
-$x = TRUE;
-$y = FALSE;
-$result = $x or $y;
-
-$result2 = $y || $x;
-
-var_dump($result);
+var_dump($z);
+$z = $y || $x;
 echo '<br/>';
-var_dump($result2);
+var_dump($z);
 echo '<br/>';
 
 
