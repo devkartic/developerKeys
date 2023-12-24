@@ -1,5 +1,7 @@
 <?php
 
+use Stripe\Transaction;
+
 require __DIR__ . '/Transaction.php';
 
 $transaction = new Transaction('100', 'Test transaction');

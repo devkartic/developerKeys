@@ -13,13 +13,13 @@ class Transaction
         $this->amount = $amount;
     }
 
-    public function addTax(float $rate): Transaction
+    public function addTax(float $rate): Stripe\Transaction
     {
         $this->amount += $this->amount * $rate / 100;
         return $this;
     }
 
-    public function applyDiscount(float $rate): Transaction
+    public function applyDiscount(float $rate): Stripe\Transaction
     {
         $this->amount -= $this->amount * $rate / 100;
         return $this;
