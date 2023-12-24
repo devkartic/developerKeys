@@ -1,15 +1,19 @@
 <?php
+
 declare(strict_types=1);
+
+namespace App\E2ClassObject\Library\PaymentGateway\Stripe;
+
+use App\E2ClassObject\Library\PaymentGateway\Stripe;
 
 class Transaction
 {
     private float $amount;
 
     public function __construct(
-        float                   $amount,
+        float $amount,
         private readonly string $description = 'Default transaction set from' . __CLASS__ . ' constructor'
-    )
-    {
+    ) {
         $this->amount = $amount;
     }
 
