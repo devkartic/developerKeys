@@ -1,0 +1,48 @@
+# Template PHP Build
+
+# This template allows you to validate your PHP application.
+# The workflow allows running tests and code linting on the default branch.
+
+image: atlassian/default-image:latest
+
+pipelines:
+  branches:
+    dev-master:
+      - step:
+          name: Deploy to development
+          deployment: test
+          script:
+            # Clone the repository excluding files/folders
+            - rm -rf vendor  # Remove the folder you want to exclude
+            - rm -rf custom-logs/  # Remove the folder you want to exclude
+            - rm bitbucket-pipelines.yml    # Remove the file you want to exclude
+
+            # Deploy using atlassian/sftp-deploy
+            - pipe: atlassian/sftp-deploy:0.8.0
+              variables:
+                USER: $DEVELOPMENT_USERNAME
+                SERVER: $DEVELOPMENT_HOST
+                PASSWORD: $DEVELOPMENT_PASSWORD
+                REMOTE_PATH: '/home/dev/public_html'
+                DELETE_FLAG: 'false' # Don't delete existing files
+                DEBUG: 'true'
+    master:
+      - step:
+          name: Deploy to development
+          deployment: production
+          script:
+            # Clone the repository excluding files/folders
+            - rm -rf vendor  # Remove the folder you want to exclude
+            - rm -rf custom-logs/  # Remove the folder you want to exclude
+            - rm bitbucket-pipelines.yml    # Remove the file you want to exclude
+
+            # Deploy using atlassian/sftp-deploy
+            - pipe: atlassian/sftp-deploy:0.8.0
+              variables:
+                USER: $PRODUCTION_USERNAME
+                SERVER: $PRODUCTION_HOST
+                PASSWORD: $PRODUCTION_PASSWORD
+                REMOTE_PATH: '/home/production/public_html'
+                DELETE_FLAG: 'false' # Don't delete existing files
+                DEBUG: 'true'
+
