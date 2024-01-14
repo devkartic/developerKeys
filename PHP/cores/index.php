@@ -4,22 +4,22 @@ ini_set('display_errors', 1);
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use App\E17IteratingOverObjects\Library\Invoice;
-use App\E17IteratingOverObjects\Library\InvoiceCollectionOne;
-use App\E17IteratingOverObjects\Library\InvoiceCollectionTwo;
+use App\E18SuperGlobalsAndBasicRouting\Library\Router;
 
-$invoiceCollection = new InvoiceCollectionTwo([new Invoice(15), new Invoice(25), new Invoice(50)]);
+$routers = new Router();
+//
+//$routers
+//    ->register('/', [\App\E18SuperGlobalsAndBasicRouting\Library\Controllers\Home::class, 'index'])
+//    ->register('/invoices', [\App\E18SuperGlobalsAndBasicRouting\Library\Controllers\Invoice::class, 'index'])
+//    ->register('/invoices/create', [\App\E18SuperGlobalsAndBasicRouting\Library\Controllers\Invoice::class, 'create']);
 
-foreach ($invoiceCollection as $invoice) {
-    echo $invoice->id . '-' . $invoice->amount . PHP_EOL;
-}
+$routers->register('/', function (){
+    echo 'Home';
+});
+
+$routers->register('/invoices', function (){
+    echo 'Invoices';
+});
 
 
-// Type Hinting for iterable
-foo(['a', 'b', 'c']);
-function foo(iterable $iterable): void
-{
-    foreach ($iterable as $key => $item) {
-        echo $key . '-' . $item . PHP_EOL;
-    }
-}
+echo $routers->resolve($_SERVER['REQUEST_URI']);
