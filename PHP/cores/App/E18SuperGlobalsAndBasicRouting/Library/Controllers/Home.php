@@ -6,6 +6,6 @@ class Home
 {
     public function index()
     {
-        return 'Home' . PHP_EOL;
+        return 'Home index' . PHP_EOL;
     }
 }
