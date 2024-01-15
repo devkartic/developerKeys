@@ -10,6 +10,10 @@ class Invoice
     }
     public function create()
     {
-        return 'Create Invoice' . PHP_EOL;
+        return '<form action="/invoices/create" method="post"><label>Amount </label><input type="text" name="amount"/></form>';
+    }
+    public function store()
+    {
+        var_dump($_POST);
     }
 }
