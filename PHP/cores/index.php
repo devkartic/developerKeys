@@ -14,10 +14,10 @@ $routers = new Router();
 
 $routers
     ->get('/', [\App\E19MVC\Library\Controllers\HomeController::class, 'index'])
-    ->get('/upload', [\App\E19MVC\Library\Controllers\HomeController::class, 'upload'])
+    ->post('/upload', [\App\E19MVC\Library\Controllers\HomeController::class, 'upload'])
     ->get('/invoices', [\App\E19MVC\Library\Controllers\InvoiceController::class, 'index'])
     ->get('/invoices/create', [\App\E19MVC\Library\Controllers\InvoiceController::class, 'create'])
-    ->post('/invoices/create', [\App\E19MVC\Library\Controllers\InvoiceController::class, 'store']);
+    ->get('/invoices/create', [\App\E19MVC\Library\Controllers\InvoiceController::class, 'store']);
 
 echo $routers->resolve(
     $_SERVER['REQUEST_URI'],
