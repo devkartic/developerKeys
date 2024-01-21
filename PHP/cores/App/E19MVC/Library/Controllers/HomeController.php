@@ -2,18 +2,16 @@
 
 namespace App\E19MVC\Library\Controllers;
 
+use App\E19MVC\App;
+use App\E19MVC\DB;
 use App\E19MVC\Library\View;
 use PDO;
-
 class HomeController
 {
     public function index(): View
     {
         try {
-            $db = new PDO('mysql:host=localhost;dbname=test', 'root', '', [
-//                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
-            ]);
-
+            $db = App::db();
             $email = 'test1@gmail.com';
             $name = 'Test';
             $is_active = 1;
@@ -33,9 +31,10 @@ class HomeController
             echo '<pre>';
             print_r($user);
             echo '</pre>';
-        } catch (\PDOException $exception) {
-            throw new \PDOException($exception->getMessage(), (int)$exception->getCode());
+        } catch (\Exception $exception) {
+            echo $exception->getMessage() . '<br/>';
         }
+
         var_dump($db);
         return View::make('index', ['foo' => 'bar']);
     }
