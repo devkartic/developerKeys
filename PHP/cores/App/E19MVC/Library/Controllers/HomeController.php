@@ -4,39 +4,36 @@ namespace App\E19MVC\Library\Controllers;
 
 use App\E19MVC\App;
 use App\E19MVC\DB;
+use App\E19MVC\Library\Models\Invoice;
+use App\E19MVC\Library\Models\SignUp;
+use App\E19MVC\Library\Models\User;
 use App\E19MVC\Library\View;
 use PDO;
+
 class HomeController
 {
     public function index(): View
     {
-        try {
-            $db = App::db();
-            $email = 'test1@gmail.com';
-            $name = 'Test';
-            $is_active = 1;
-            $created_at = date('Y-m-d h:i:s');
+        $db = App::db();
 
-            $query = 'INSERT INTO users (email, full_name, is_active, created_at) VALUES (:email, :name, :active, :date)';
+        $email = 'test1@gmail.com';
+        $name = 'Test';
+        $amount = random_int(20, 100);
 
-            $stmt = $db->prepare($query);
-            $stmt->bindValue(':email', $email);
-            $stmt->bindValue(':name', $name);
-            $stmt->bindParam(':active', $is_active, PDO::PARAM_BOOL);
-            $stmt->bindValue(':date', $created_at);
-            $stmt->execute();
+        $userModel = new User();
+        $invoiceModel = new Invoice();
 
-            $id = $db->lastInsertId();
-            $user = $db->query('SELECT * FROM users where id=' . $id)->fetch();
-            echo '<pre>';
-            print_r($user);
-            echo '</pre>';
-        } catch (\Exception $exception) {
-            echo $exception->getMessage() . '<br/>';
-        }
+        $invoiceId = (new SignUp($userModel, $invoiceModel))->register(
+            [
+                'email' => $email,
+                'name' => $name,
+            ],
+            [
+                'amount' => $amount,
+            ]
+        );
 
-        var_dump($db);
-        return View::make('index', ['foo' => 'bar']);
+        return View::make('index', ['invoice' => $invoiceModel->find($invoiceId)]);
     }
 
     public function upload()

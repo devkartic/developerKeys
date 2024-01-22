@@ -1,7 +1,19 @@
-<?php
-echo $foo;
-?>
-<form action="/upload" method="post" enctype="multipart/form-data">
-    <input type="file" name="receipt" />
-    <button type="submit">Upload</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<h2>Home Page</h2>
+<hr/>
+<div>
+    <?php if(!empty($invoice)):?>
+        Invoice ID: <?= $invoice['id'];?><br/>
+        Invoice Amount: <?= $invoice['amount'];?><br/>
+        User: <?= $invoice['full_name'];?><br/>
+    <?php endif;?>
+</div>
+
+</body>
+</html>
