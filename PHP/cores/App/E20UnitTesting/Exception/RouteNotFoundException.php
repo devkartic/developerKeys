@@ -1,0 +1,10 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\E20UnitTesting\Exception;
+
+class RouteNotFoundException extends \Exception
+{
+    protected $message = '404 route not found!';
+}
