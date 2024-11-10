@@ -16,3 +16,7 @@ For many simple, single file projects, you may find it inconvenient to write a c
 ### `$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:8.2-cli php your-script.php`
 
 For more details : https://hub.docker.com/_/php
+
+Run container
+$ docker run -it --name container-name image-repository:tag /bin/bash
+
